@@ -12,8 +12,8 @@ var ctx = canvas.getContext("2d");
 setInterval(draw, 10);
 
 var radius = 10;
-var x = canvas.width / 2;
-var y = canvas.height - 30;
+var x = canvas.width / 21;
+var y = canvas.height - 21;
 var dx = -2;
 var dy = -2;
 
