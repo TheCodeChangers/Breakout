@@ -38,6 +38,9 @@ var brickValue = 10;
 var fieldTop = 30;
 var fieldLeft = (canvas.width - ((fieldCols * brickW) + (brickPadding * (fieldCols - 1)))) / 2;
 
+// Custom stuff for NOPE! message
+var isGameOver = false;
+
 var bricks = [];
 for (r=0; r < fieldRows; r++) {
     bricks[r] = [];
@@ -48,6 +51,12 @@ for (r=0; r < fieldRows; r++) {
 
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    if (isGameOver) {
+        ctx.font="100px Comic Sans MS";
+        ctx.fillStyle="red";
+        ctx.fillText("NOPE!", 50,(canvas.height/2) - 50);
+        return;
+    }
 
     drawScore();
     drawBall();
@@ -103,8 +112,9 @@ function drawScore() {
 }
 
 function gameOver() {
-    alert("GAME OVER");
-    document.location.reload();
+    isGameOver = true;
+    // alert("GAME OVER");
+    // document.location.reload();
 }
 
 function iAmSoAwesome() {
