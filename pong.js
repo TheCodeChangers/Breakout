@@ -21,6 +21,7 @@ var dy = -2;
 var paddleHeight = 10;
 var paddleWidth = 75;
 var paddleX = (canvas.width-paddleWidth)/2;
+var paddleColor = Randomizer.nextColor();
 // Paddle controls
 var rightPressed = false;
 var leftPressed = false;
@@ -142,7 +143,7 @@ function drawBall() {
     ctx.beginPath();
     // arc(left, top, radius, startAngle, endAngle, counterclockwise)
     ctx.arc(x, y, radius, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
+    ctx.fillStyle = paddleColor;
     ctx.fill();
     ctx.closePath();
 }
@@ -150,7 +151,7 @@ function drawBall() {
 function drawPaddle() {
     ctx.beginPath();
     ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
-    ctx.fillStyle = "#0095DD";
+    ctx.fillStyle = paddleColor;
     ctx.fill();
     ctx.closePath();
 }
