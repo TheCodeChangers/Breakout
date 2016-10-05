@@ -106,8 +106,9 @@ function drawScore() {
 }
 
 function gameOver() {
-    alert("GAME OVER");
-    document.location.reload();
+    isGameOver = true;
+    // alert("GAME OVER");
+    // document.location.reload();
 }
 
 function iAmSoAwesome() {
