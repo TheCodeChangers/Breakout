@@ -51,6 +51,12 @@ for (r=0; r < fieldRows; r++) {
 
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    if (isGameOver) {
+        ctx.font="100px Comic Sans MS";
+        ctx.fillStyle="red";
+        ctx.fillText("NOPE!", 50,(canvas.height/2) - 50);
+        return;
+    }
 
     drawScore();
     drawBall();
