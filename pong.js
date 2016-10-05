@@ -38,6 +38,9 @@ var brickValue = 10;
 var fieldTop = 30;
 var fieldLeft = (canvas.width - ((fieldCols * brickW) + (brickPadding * (fieldCols - 1)))) / 2;
 
+// Custom stuff for NOPE! message
+var isGameOver = false;
+
 var bricks = [];
 for (r=0; r < fieldRows; r++) {
     bricks[r] = [];
